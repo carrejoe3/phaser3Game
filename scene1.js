@@ -1,14 +1,13 @@
 class Scene1 extends Phaser.Scene {
     constructor() {
-        super({key: "scene1"});
+        super({key: "Scene1"});
     }
 
     preload() {
-        //needs image
-        this.load.image('GFS', 'assets/');
+        this.load.image('skybox', 'assets/environment/back.png');
     }
 
     create() {
-        this.image = this.add.image(400, 300, GFS);
+        this.add.tileSprite(0, 0, 1024, 768, 'skybox').setScale(2);
     }
 }
